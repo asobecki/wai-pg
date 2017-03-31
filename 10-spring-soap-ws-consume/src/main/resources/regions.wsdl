@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://spring.io/guides/gs-producing-web-service" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://spring.io/guides/gs-producing-web-service" targetNamespace="http://spring.io/guides/gs-producing-web-service">
+  <wsdl:types>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://spring.io/guides/gs-producing-web-service">
+
+    <xs:element name="getRegionRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getRegionResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="region" type="tns:region"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="region">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="population" type="xs:int"/>
+            <xs:element name="capital" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getRegionResponse">
+    <wsdl:part element="tns:getRegionResponse" name="getRegionResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getRegionRequest">
+    <wsdl:part element="tns:getRegionRequest" name="getRegionRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="RegionsPort">
+    <wsdl:operation name="getRegion">
+      <wsdl:input message="tns:getRegionRequest" name="getRegionRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:getRegionResponse" name="getRegionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RegionsPortSoap11" type="tns:RegionsPort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getRegion">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="getRegionRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getRegionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RegionsPortService">
+    <wsdl:port binding="tns:RegionsPortSoap11" name="RegionsPortSoap11">
+      <soap:address location="http://127.0.0.1:8080/ws"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
