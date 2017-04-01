@@ -15,18 +15,22 @@ import org.springframework.xml.xsd.XsdSchema;
 /**
  * Created by asobecki on 30.03.17.
  */
-@EnableWs
+@EnableWs   // wybór rodzaju serwletu do obsługi wiadomości SOAP (Spring WS MessageDispatcherServlet)
 @Configuration
 public class WebServiceConfig extends WsConfigurerAdapter {
 
+
+    // wskazanie serwletowi kontekstu aplikacji, zeby Spring WS mógł automatycznie wykryć beany Spring'a
     @Bean
     public ServletRegistrationBean messageDispatcherServlet(ApplicationContext applicationContext) {
         MessageDispatcherServlet servlet = new MessageDispatcherServlet();
         servlet.setApplicationContext(applicationContext);
-        servlet.setTransformWsdlLocations(true);
-        return new ServletRegistrationBean(servlet, "/ws/*");
+        servlet.setTransformWsdlLocations(true);    // transformacja adresów usługi w zależności od sposobu wywołania (127.0.0.1/192.168.0.1)
+        return new ServletRegistrationBean(servlet, "/ws/*");   // mapowanie url na servlet
     }
 
+
+    // wystawia interfejs usługi w standarcie WSDL 1.1 uzywając zdefiniowanej schemy (regionsSchema)
     @Bean(name = "regions")
     public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema regionsSchema) {
         DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();

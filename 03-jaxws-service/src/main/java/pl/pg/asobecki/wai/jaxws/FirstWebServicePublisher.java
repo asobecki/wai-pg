@@ -9,5 +9,6 @@ import javax.xml.ws.Endpoint;
 public class FirstWebServicePublisher {
     public static void main(String[] args) {
         Endpoint.publish("http://localhost:8080/jax-ws/first-ws", new FirstWebServiceImpl());
+        // test: http://localhost:8080/jax-ws/first-ws?wsdl
     }
 }
