@@ -12,6 +12,19 @@
         <load-on-startup>1</load-on-startup>
     </servlet>
 
+    <filter>
+        <filter-name>LogFilter</filter-name>
+        <filter-class>pl.pg.asobecki.wai.LogFilter</filter-class>
+        <init-param>
+            <param-name>test-param</param-name>
+            <param-value>First init parameter</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>LogFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
     <servlet-mapping>
         <servlet-name>firstServlet</servlet-name>
         <url-pattern>/first</url-pattern>
