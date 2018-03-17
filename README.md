@@ -1,7 +1,10 @@
-# wai-pg
-Wytwarzanie Aplikacji Internetowych - przykłady
+# WAI-PG repository
+### Materials for students of course Wytwarzanie Aplikacji Internetowych in Gdansk University of Technology
+*andrzej.sobecki@pg.edu.pl*
 
-### Content
+#### Content of repository
+Each of directory contain project that you could open in IDEA software. Also in each directory you will find additional documentation created in README.md. Please enjoy all examples before you will start laboratories.
+
 - 01-axis2 - example Dockerfile with java 8 and axis2 standalone server
 - 02-servlet - simple servlet with doGet and doPost actions
 - 03-jaxws-service - web service created using jax-ws
@@ -14,4 +17,10 @@ Wytwarzanie Aplikacji Internetowych - przykłady
 - 10-spring-soap-ws-consume - spring web service consuming soap message
 - 11-spring-rest-ws-produce - spring REST web service
 - 12-spring-rest-ws-consume - usage of REST web service using spring
+
+#### Requirements to run examples
+In order to be able to run examples from this repository you should install this software:
+1. Docker CE https://docs.docker.com/install/
+2. JRE https://www.java.com/pl/download/
+3. Maven https://maven.apache.org/install.html
 
