@@ -22,6 +22,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <!-- zawiera Hibernate (implementacja JPA), Spring Data JPA (JPA-based repositories), Spring ORM (podstawowy ORM dla Springa)-->
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>
