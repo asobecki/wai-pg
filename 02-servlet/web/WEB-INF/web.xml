@@ -22,11 +22,12 @@
     </filter>
     <filter-mapping>
         <filter-name>LogFilter</filter-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/also-first</url-pattern>
     </filter-mapping>
 
     <servlet-mapping>
         <servlet-name>firstServlet</servlet-name>
+        <url-pattern>/</url-pattern>
         <url-pattern>/first</url-pattern>
         <url-pattern>/also-first</url-pattern>
         <url-pattern>/first-first</url-pattern>
