@@ -1,5 +1,6 @@
 package pl.pg.asobecki.wai.spring;
 
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,6 +18,11 @@ public class MessageController {
 
     @RequestMapping("/welcome")
     public Message sendMessage(@RequestParam(value="recipient", defaultValue = "Jan Kowalski") String recipient) {
+        return new Message(counter.incrementAndGet(), recipient,String.format(defaultMsg, recipient));
+    }
+
+    @RequestMapping("/welcome/{recipient}")
+    public Message sendMessage2(@PathVariable String recipient) {
         return new Message(counter.incrementAndGet(), recipient,String.format(defaultMsg, recipient));
     }
 }
