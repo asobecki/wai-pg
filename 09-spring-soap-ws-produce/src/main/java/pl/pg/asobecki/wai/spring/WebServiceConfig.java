@@ -30,7 +30,7 @@ public class WebServiceConfig extends WsConfigurerAdapter {
     }
 
 
-    // wystawia interfejs usługi w standarcie WSDL 1.1 uzywając zdefiniowanej schemy (regionsSchema)
+    // wystawia interfejs usługi w standardzie WSDL 1.1 uzywając zdefiniowanej schemy (regionsSchema)
     @Bean(name = "regions")
     public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema regionsSchema) {
         DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();

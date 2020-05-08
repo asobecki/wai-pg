@@ -3,7 +3,7 @@ package pl.pg.asobecki.wai.spring;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-// @Configuration - this class is source of bean definitions
+// @Configuration - this class is a source of bean definitions
 // @EnableAutoConfiguration - start adding beans based on classpath settings
 // @EnableWebMvc - enable spring mvc -> its activate DispatcherServlet
 // @ComponentScan - spring must look for other components, configuration and services annotations in pl.pg.asobecki.wai.spring package
