@@ -17,6 +17,8 @@ Each of directory contain project that you could open in IDEA software. Also in 
 - 10-spring-soap-ws-consume - spring web service consuming soap message
 - 11-spring-rest-ws-produce - spring REST web service
 - 12-spring-rest-ws-consume - usage of REST web service using spring
+- 13-spring-jpa - usage of the spring boot and spring JPA
+- 14-dotnetcore-rest - dotnet core web app example with REST API, EntityFramework nad CompactSQL
 
 #### Requirements to run examples
 In order to be able to run examples from this repository you should install this software:
