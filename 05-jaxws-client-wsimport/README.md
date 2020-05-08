@@ -6,6 +6,7 @@ This example use different assumption about how the interface of web service is 
 - binary files with is service description,
 - interface descrption,
 - stub class which you can use to send requests and receive response.
+*Since JDK 11 `wsimport` is not provided with the package*
 
 ## Build and run the example
 Building process you can perform by using `mvn package` command which create **05-jaxws-client-wsimport.jar** file in the **target** directory. Next in order to run the compiled application you can use `java -cp target/05-jaxws-client-wsimport-1.0-SNAPSHOT.jar pl.pg.asobecki.wai.jaxws.Main` command. After that the application will create a request and send them to the web service. The response gathered from the web service will be exposed in the console.

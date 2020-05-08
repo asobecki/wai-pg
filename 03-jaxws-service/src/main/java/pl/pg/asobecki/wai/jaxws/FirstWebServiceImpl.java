@@ -10,6 +10,6 @@ import javax.jws.soap.SOAPBinding;
 public class FirstWebServiceImpl implements FirstWebService {
 
     public String getFirstWebServiceAsString(String name) {
-        return "First Web Service JAX-WS "+name;
+        return "First Web Service JAX-WS. Hello "+name;
     }
 }
