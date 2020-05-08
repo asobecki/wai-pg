@@ -15,7 +15,7 @@ public class SecondController {
     @Value("${default.welcome.message}")
     private String msg = "Some text";
 
-    @RequestMapping(value = "/aaa")
+    @RequestMapping(value = "/some-action")
     public String someAction(@RequestParam(value="name", required = false) String name, Model model) {
         if(name == null)
             name = msg;
