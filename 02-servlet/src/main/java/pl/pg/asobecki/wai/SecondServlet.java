@@ -8,9 +8,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-/**
- * Created by asobecki on 29.03.17.
- */
 @WebServlet(
         name = "secondServlet",
         urlPatterns = {"/second", "/also-second"},

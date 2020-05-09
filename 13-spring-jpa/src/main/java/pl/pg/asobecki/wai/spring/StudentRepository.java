@@ -10,5 +10,7 @@ import java.util.List;
 public interface StudentRepository extends CrudRepository<StudentEntity, Long> {
 
     List<StudentEntity> getStudentsByAlbumNr(Integer albumNr);
-
+    //StudentEntity getStudentById(Long id);
+    //List<StudentEntity> findBySurname(String surname);
+    //List<StudentEntity> findByName(String name);
 }

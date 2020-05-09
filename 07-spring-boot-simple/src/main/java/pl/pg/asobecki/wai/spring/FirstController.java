@@ -15,7 +15,7 @@ public class FirstController {
     }
 
     @RequestMapping(value ="/second/{number}")
-    public Integer drugaAkcja(@PathVariable(name = "number") Integer xx) {
+    public Integer drugaAkcja(@PathVariable(name = "number", required = false) Integer xx) {
         return 22+xx;
     }
 }

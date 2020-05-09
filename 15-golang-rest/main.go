@@ -19,3 +19,6 @@ func dispatcher() {
 func main() {
 	dispatcher()
 }
+
+// go build
+// ./main

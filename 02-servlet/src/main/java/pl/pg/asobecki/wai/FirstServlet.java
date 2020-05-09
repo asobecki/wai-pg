@@ -15,6 +15,8 @@ public class FirstServlet extends HttpServlet {
         response.getWriter().println("Hello students!");
     }
 
+    // protected void doPost()
+
     // Initializer
     @Override
     public void init() throws  ServletException {
