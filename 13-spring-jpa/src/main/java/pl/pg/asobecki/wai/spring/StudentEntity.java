@@ -4,9 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.UniqueConstraint;
-
-import org.hibernate.annotations.Index;
 
 /**
  * Created by asobecki on 01.04.2017.
@@ -19,6 +16,8 @@ public class StudentEntity {
     private String name;
     private String surname;
     private Integer albumNr;
+    private String password;
+
 
     // only for JPA
     protected StudentEntity() {
