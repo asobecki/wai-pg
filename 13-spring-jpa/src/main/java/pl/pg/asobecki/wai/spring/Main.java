@@ -6,6 +6,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import pl.pg.asobecki.wai.spring.model.entities.StudentEntity;
+import pl.pg.asobecki.wai.spring.model.repositories.StudentRepository;
 
 @SpringBootApplication
 public class Main {
@@ -28,18 +30,6 @@ public class Main {
             for(StudentEntity studentEntity : repository.findAll()) {
                 log.info(studentEntity.toString());
             }
-
-            log.info("Student with id 1");
-            log.info(repository.findOne(1L).toString());
-
-            //over-posting
-            StudentEntity x = repository.findOne(1L);
-            // wysylamy go na formularz update
-            repository.save(x);
-            // submit -> repsotiry ()
-            // DTO -> Data-Transfer-Object
-            // ograniczone entities to tego co idzie na formularz
-            // User -> DTO -> Entity -> DB
 
             log.info("Student with album number 103");
             log.info(repository.getStudentsByAlbumNr(103).toString());

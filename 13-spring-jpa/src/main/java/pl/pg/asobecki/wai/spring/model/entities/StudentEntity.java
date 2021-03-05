@@ -1,4 +1,4 @@
-package pl.pg.asobecki.wai.spring;
+package pl.pg.asobecki.wai.spring.model.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

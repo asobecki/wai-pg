@@ -1,6 +1,7 @@
-package pl.pg.asobecki.wai.spring;
+package pl.pg.asobecki.wai.spring.model.repositories;
 
 import org.springframework.data.repository.CrudRepository;
+import pl.pg.asobecki.wai.spring.model.entities.StudentEntity;
 
 import java.util.List;
 

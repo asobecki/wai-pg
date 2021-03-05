@@ -1,0 +1,21 @@
+{
+  "name": "17-nodejs-express",
+  "version": "1.0.0",
+  "description": "Example of usage the node.js and express framework.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "wai-pg"
+  ],
+  "author": "Andrzej Sobecki",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
